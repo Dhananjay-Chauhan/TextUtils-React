@@ -71,16 +71,12 @@ function App() {
   };
   return (
     <>
-      <Router>
       <Navbar title="TextUtils"  mode={mode} toogleMode={toogleMode} txt={txt} toogleModeR={toogleModeR} txtR={txtR} />
       <Alert alert={alert} />
       <div className="container">
-        <Routes>
-          <Route exact path="/" element={<TextForm heading="Write your text Here" mode={mode} showAlert={showAlert} />}/>
-          {/* <Route exact path="/about" element={<About/>}/> */}
-        </Routes>
+          <TextForm heading="Write your text Here" mode={mode} showAlert={showAlert} />
       </div>
-      </Router>
+     
     </>
   );
 };
